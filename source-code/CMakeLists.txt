@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(ExpressionEvaluator)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage -O0")
 
 # include 디렉토리 포함
 include_directories(include)
