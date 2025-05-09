@@ -24,10 +24,8 @@ target_link_libraries(expr_main evaluator)
 
 # 테스트 설정
 enable_testing()
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
 
 add_executable(test_evaluator test/test_evaluator.cpp)
-target_link_libraries(test_evaluator evaluator GTest::GTest GTest::Main)
+target_link_libraries(test_evaluator evaluator gtest gtest_main)
 
 add_test(NAME EvaluatorTests COMMAND test_evaluator)
